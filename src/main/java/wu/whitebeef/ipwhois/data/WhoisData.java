@@ -77,7 +77,7 @@ public class WhoisData {
                 builder.organization(connection.getString("org"));
             }
             if (connection.has("domain")) {
-                builder.organization(connection.getString("domain"));
+                builder.domain(connection.getString("domain"));
             }
         }
         if (jsonObject.has("region")) {
