@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-16">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="" th:href="@{/css/style.css}">
     <title>IPWhois</title>
 </head>
 <body>
@@ -17,15 +18,15 @@
     <input type="text" name="ip">
     <button type="submit">Check</button>
 </form>
-<br th:text="${info.success}? 'Информация по IP '+${info.ip}+':': 'Вы указали неверный IP, или он приватный'"><br/>
+<p th:text="${info.success}? 'Информация по IP '+${info.ip}+':': 'Вы указали неверный IP, или он приватный'"><br/>
 <div class="Information" th:hidden="${info.success} ? 'false' : 'true'">
-    <br th:text="'Континент: '+${info.continent}?: 'Неизвестно'">
-    <br th:text="'Страна: '+${info.country}+${info.emoji}?: 'Неизвестно'">
-    <br th:text="'Город: '+${info.city}?: 'Неизвестно'">
-    <br th:text="'Часовой пояс: '+${info.timezone}?: 'Неизвестно'">
-    <br th:text="'Провайдер: '+${info.organization}?: 'Неизвестно'">
-    <br th:text="'Домен: '+${info.domain}?: 'Неизвестно'">
-    <br th:text="'Регион: '+${info.region}?: 'Неизвестно'">
+    <p th:text="'Континент: '+${info.continent}?: 'Неизвестно'">
+    <p th:text="'Страна: '+${info.country}+${info.emoji}?: 'Неизвестно'">
+    <p th:text="'Город: '+${info.city}?: 'Неизвестно'">
+    <p th:text="'Часовой пояс: '+${info.timezone}?: 'Неизвестно'">
+    <p th:text="'Провайдер: '+${info.organization}?: 'Неизвестно'">
+    <p th:text="'Домен: '+${info.domain}?: 'Неизвестно'">
+    <p th:text="'Регион: '+${info.region}?: 'Неизвестно'">
 </div>
 </body>
 </html>

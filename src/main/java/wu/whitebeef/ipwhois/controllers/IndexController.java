@@ -1,5 +1,6 @@
 package wu.whitebeef.ipwhois.controllers;
 
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,8 +21,8 @@ public class IndexController {
     }
 
     @GetMapping
-    public String index(Model model) {
-        System.out.println("hui");
+    public String index(Model model, HttpServletRequest request) {
+        model.addAttribute("info", WhoisData.fromJson(ipWhoisService.getResponse(request.getRemoteAddr())));
         return "index";
     }
 
