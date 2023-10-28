@@ -19,6 +19,7 @@
     <input type="text" id="ipl" name="ip" th:value="${info.ip}">
     <button type="submit">Check</button>
 </form>
+
 <p th:utext="${info.success}? 'Информация по IP <b>'+${info.ip}+'</b>:': 'Вы указали неверный IP, или он приватный'"><br/>
 <div class="Information" th:hidden="${info.success} ? 'false' : 'true'">
     <p th:text="'Континент: '+${info.continent}?: 'Не определено'">

@@ -1,4 +1,4 @@
-package wu.whitebeef.ipwhois.services;
+package ru.whitebeef.ipwhois.services;
 
 import org.apache.commons.io.IOUtils;
 import org.json.JSONObject;

@@ -1,4 +1,4 @@
-package wu.whitebeef.ipwhois.controllers;
+package ru.whitebeef.ipwhois.controllers;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,8 +7,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import wu.whitebeef.ipwhois.data.WhoisData;
-import wu.whitebeef.ipwhois.services.IPWhoisService;
+import ru.whitebeef.ipwhois.data.WhoisData;
+import ru.whitebeef.ipwhois.services.IPWhoisService;
 
 @Controller("/")
 public class IndexController {

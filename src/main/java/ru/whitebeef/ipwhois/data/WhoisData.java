@@ -1,4 +1,4 @@
-package wu.whitebeef.ipwhois.data;
+package ru.whitebeef.ipwhois.data;
 
 import lombok.Builder;
 import lombok.Data;
